@@ -1,0 +1,12 @@
+---
+title: "Computational Geometry"
+---
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+<a href="evolution.qmd" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; display: block;">
+  <h3>Evolution</h3>
+  <p>Computational geometry simulation.</p>
+</a>
+
+</div>

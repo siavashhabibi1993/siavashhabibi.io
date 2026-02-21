@@ -1,0 +1,12 @@
+---
+title: "Structural Engineering"
+---
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+<a href="mohrs-circle.qmd" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; display: block;">
+  <h3>Mohr's Circle</h3>
+  <p>Interactive Mohr's Circle for stress transformation.</p>
+</a>
+
+</div>

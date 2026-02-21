@@ -13,5 +13,11 @@
   },
   "structural-engineering/mohrs-circle.qmd": {
     "mohrs-circle.html": "fce21ecc"
+  },
+  "computational-geometry/index.qmd": {
+    "index.html": "152f318f"
+  },
+  "structural-engineering/index.qmd": {
+    "index.html": "b6e1ba3b"
   }
 }

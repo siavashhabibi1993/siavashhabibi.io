@@ -5,16 +5,20 @@ title: "siavashhabibi.io"
 ::: {.grid}
 
 ::: {.g-col-6}
-[![](images/computational-geometry.gif)](computational-geometry/evolution.qmd)
+<a href="computational-geometry/evolution.qmd">
+  <img src="images/computational-geometry.gif" style="width:100%; height:300px; object-fit:cover; border-radius:8px;"/>
+</a>
 
 ### Computational Geometry
 Exploring algorithms and geometric computation.
 
-[View Projects →](computational-geometry/evolution.qmd)
+[View Projects →](computational-geometry/)
 :::
 
 ::: {.g-col-6}
-[![](images/structural-engineering.jpg)](structural-engineering/)
+<a href="structural-engineering/">
+  <img src="images/structural-engineering.jpg" style="width:100%; height:300px; object-fit:cover; border-radius:8px;"/>
+</a>
 
 ### Structural Engineering
 Structural analysis and engineering tools.
