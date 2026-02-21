@@ -1,14 +1,15 @@
 ---
 pagetitle: "Mohr's Circle"
-description: "An interactive Mohr's Circle tool for stress transformation and principal stress visualization."
+description: "Interactive Mohr's Circle for stress transformation and principal stress visualization."
 format:
   html:
     toc: false
     title-block-banner: false
 ---
+
 <div class="observable-embed">
   <iframe 
-    src="https://observablehq.com/embed/@syaleni/mohrs-circle?ui=classic" 
+    src="https://observablehq.com/embed/@syaleni/mohrs-circle?ui=classic"
     allow="cross-origin-isolated">
   </iframe>
 </div>

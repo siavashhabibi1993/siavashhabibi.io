@@ -64,5 +64,35 @@
   },
   "structural-engineering/simply-supported-beam.qmd": {
     "simply-supported-beam.html": "6e426a23"
+  },
+  "creative-coding/click-and-delete.qmd": {
+    "click-and-delete.html": "719b21f0"
+  },
+  "creative-coding/hatches.qmd": {
+    "hatches.html": "76026d36"
+  },
+  "creative-coding/index.qmd": {
+    "index.html": "1eabdf5b"
+  },
+  "creative-coding/matrix-background.qmd": {
+    "matrix-background.html": "262fa16d"
+  },
+  "creative-coding/mouse-tracker.qmd": {
+    "mouse-tracker.html": "9b62fcdf"
+  },
+  "creative-coding/paint-brush.qmd": {
+    "paint-brush.html": "d6dda143"
+  },
+  "creative-coding/snap-to-grid.qmd": {
+    "snap-to-grid.html": "329699b4"
+  },
+  "creative-coding/svg-components.qmd": {
+    "svg-components.html": "6acab89f"
+  },
+  "computational-geometry/convex-hull.qmd": {
+    "convex-hull.html": "c6ba47bf"
+  },
+  "computational-geometry/kd-tree.qmd": {
+    "kd-tree.html": "c32defe9"
   }
 }

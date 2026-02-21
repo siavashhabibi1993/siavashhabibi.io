@@ -1,0 +1,15 @@
+---
+pagetitle: "Hatches"
+description: "Generative hatch pattern exploration using creative coding techniques."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/hatches?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

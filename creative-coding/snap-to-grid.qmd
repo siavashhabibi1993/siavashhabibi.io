@@ -1,0 +1,15 @@
+---
+pagetitle: "Snap to Grid"
+description: "Interactive snap-to-grid drawing tool."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/8720d260866bb9b8?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

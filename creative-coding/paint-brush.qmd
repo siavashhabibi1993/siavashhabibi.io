@@ -1,0 +1,15 @@
+---
+pagetitle: "Paint Brush"
+description: "Interactive paint brush tool built with canvas and Observable."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/1f430318c59373ce?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

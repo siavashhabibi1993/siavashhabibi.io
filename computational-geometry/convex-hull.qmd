@@ -1,0 +1,15 @@
+---
+pagetitle: "Convex Hull"
+description: "Interactive convex hull computation and visualization using computational geometry algorithms."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/convex-hull?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

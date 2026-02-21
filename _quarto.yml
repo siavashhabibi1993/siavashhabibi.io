@@ -29,20 +29,14 @@ website:
             text: "Structural Wood Panels"
           - href: structural-engineering/soil-pressure-coefficients.qmd
             text: "Soil Pressure Coefficients"
-      - text: "Programming"
-        menu:
-          - href: programming/index.qmd
-            text: "Overview"
-          - href: programming/etabspy.qmd
-            text: "ETABSPY"
-          - href: programming/etabsagent.qmd
-            text: "ETABSAGENT"
-          - href: programming/safepy.qmd
-            text: "SAFEPY"
       - text: "Computational Geometry"
         menu:
           - href: computational-geometry/index.qmd
             text: "Overview"
+          - href: computational-geometry/kd-tree.qmd
+            text: "KD Tree"
+          - href: computational-geometry/convex-hull.qmd
+            text: "Convex Hull"
           - href: computational-geometry/evolution.qmd
             text: "Evolution"
           - href: computational-geometry/interpolators.qmd
@@ -55,6 +49,34 @@ website:
             text: "Random Generatives"
           - href: computational-geometry/some-circles.qmd
             text: "Some Circles"
+      - text: "Creative Coding"
+        menu:
+          - href: creative-coding/index.qmd
+            text: "Overview"
+          - href: creative-coding/matrix-background.qmd
+            text: "Matrix Background"
+          - href: creative-coding/click-and-delete.qmd
+            text: "Click and Delete"
+          - href: creative-coding/paint-brush.qmd
+            text: "Paint Brush"
+          - href: creative-coding/snap-to-grid.qmd
+            text: "Snap to Grid"
+          - href: creative-coding/hatches.qmd
+            text: "Hatches"
+          - href: creative-coding/mouse-tracker.qmd
+            text: "Mouse Tracker"
+          - href: creative-coding/svg-components.qmd
+            text: "SVG Components"
+      - text: "Programming"
+        menu:
+          - href: programming/index.qmd
+            text: "Overview"
+          - href: programming/etabspy.qmd
+            text: "ETABSPY"
+          - href: programming/etabsagent.qmd
+            text: "ETABSAGENT"
+          - href: programming/safepy.qmd
+            text: "SAFEPY"
       - href: about.qmd
         text: About
 

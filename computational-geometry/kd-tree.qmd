@@ -1,0 +1,15 @@
+---
+pagetitle: "KD Tree"
+description: "Interactive visualization of KD Tree spatial partitioning and nearest neighbor search."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/kd-tree?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

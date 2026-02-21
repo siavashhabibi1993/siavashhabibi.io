@@ -1,0 +1,15 @@
+---
+pagetitle: "Mouse Tracker"
+description: "Interactive mouse position tracker with visual feedback."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/mouse-tracker?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

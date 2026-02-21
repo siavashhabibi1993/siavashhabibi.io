@@ -6,9 +6,10 @@ format:
     toc: false
     title-block-banner: false
 ---
+
 <div class="observable-embed">
-    <iframe 
-    src="https://observablehq.com/embed/@syaleni/some-circles?ui=classic" 
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/some-circles?ui=classic"
     allow="cross-origin-isolated">
-    </iframe>
+  </iframe>
 </div>

@@ -1,0 +1,15 @@
+---
+pagetitle: "Matrix Background"
+description: "An animated Matrix-style background effect using canvas and JavaScript."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/a606f84ced79cc40?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

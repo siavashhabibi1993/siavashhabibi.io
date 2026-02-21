@@ -4,7 +4,7 @@
     "href": "structural-engineering/index.html",
     "title": "SIAVASHHABIBI.io",
     "section": "",
-    "text": "Glass Panel Load Calculation\n\n\nInteractive calculator for glass panel load capacity and thickness design per structural glazing standards.\n\n\n\nMohr’s Circle\n\n\nAn interactive Mohr’s Circle tool for stress transformation and principal stress visualization.\n\n\n\nFlexural Resistance of a Reinforced Concrete Beam\n\n\nInteractive calculator for the flexural resistance of reinforced concrete beams per CSA design standards.\n\n\n\nSection Properties Calculator\n\n\nInteractive calculator for cross-section properties including moment of inertia, centroid, and section modulus.\n\n\n\nAnalysis of a Simply Supported Beam\n\n\nInteractive analysis of a simply supported beam with shear force and bending moment diagrams.\n\n\n\nSoil Pressure Coefficients\n\n\nInteractive visualization of active and passive soil pressure coefficients using Rankine and Coulomb theories.\n\n\n\nStructural Wood Panels\n\n\nInteractive reference and design tool for structural wood panels and sheathing properties."
+    "text": "Glass Panel Load Calculation\n\n\nInteractive calculator for glass panel load capacity and thickness design per structural glazing standards.\n\n\n\nMohr’s Circle\n\n\nInteractive Mohr’s Circle for stress transformation and principal stress visualization.\n\n\n\nFlexural Resistance of a Reinforced Concrete Beam\n\n\nInteractive calculator for the flexural resistance of reinforced concrete beams per CSA design standards.\n\n\n\nSection Properties Calculator\n\n\nInteractive calculator for cross-section properties including moment of inertia, centroid, and section modulus.\n\n\n\nAnalysis of a Simply Supported Beam\n\n\nInteractive analysis of a simply supported beam with shear force and bending moment diagrams.\n\n\n\nSoil Pressure Coefficients\n\n\nInteractive visualization of active and passive soil pressure coefficients using Rankine and Coulomb theories.\n\n\n\nStructural Wood Panels\n\n\nInteractive reference and design tool for structural wood panels and sheathing properties."
   },
   {
     "objectID": "programming/etabspy.html",
@@ -53,7 +53,7 @@
     "href": "computational-geometry/index.html",
     "title": "SIAVASHHABIBI.io",
     "section": "",
-    "text": "Evolution\n\n\nAn interactive computational geometry simulation exploring evolutionary algorithms and geometric computation.\n\n\n\nInterpolators\n\n\nInteractive exploration of interpolation methods and smooth curve generation.\n\n\n\nParametric Curve Viewer\n\n\nInteractive viewer for parametric curves and geometric forms.\n\n\n\nRadial Pattern\n\n\nInteractive radial pattern generator using parametric geometry and trigonometric functions.\n\n\n\nRandom Generatives\n\n\nGenerative art and randomized computational geometry visualizations.\n\n\n\nSome Circles\n\n\nGenerative circle patterns using parametric geometry and iterative algorithms."
+    "text": "Convex Hull\n\n\nInteractive convex hull computation and visualization using computational geometry algorithms.\n\n\n\nEvolution\n\n\nComputational geometry simulation exploring evolutionary algorithms.\n\n\n\nInterpolators\n\n\nInteractive exploration of interpolation methods and smooth curve generation.\n\n\n\nKD Tree\n\n\nInteractive visualization of KD Tree spatial partitioning and nearest neighbor search.\n\n\n\nParametric Curve Viewer\n\n\nInteractive viewer for parametric curves and geometric forms.\n\n\n\nRadial Pattern\n\n\nInteractive radial pattern generator using parametric geometry and trigonometric functions.\n\n\n\nRandom Generatives\n\n\nGenerative art and randomized computational geometry visualizations.\n\n\n\nSome Circles\n\n\nGenerative circle patterns using parametric geometry and iterative algorithms."
   },
   {
     "objectID": "about.html",
@@ -166,5 +166,12 @@
     "title": "SIAVASHHABIBI.io",
     "section": "",
     "text": "ETABSAGENT\n\n\nAI agent powered by ETABSPY for intelligent structural engineering workflows.\n\n\n\nETABSPY\n\n\nA Python desktop application that automates shear wall pier force extraction and S-CONCRETE file generation for multi-story building structural analysis."
+  },
+  {
+    "objectID": "creative-coding/index.html",
+    "href": "creative-coding/index.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "```{python}\n#| echo: false\n#| output: asis\nimport os\nimport re\n\ndef get_frontmatter(filepath):\n    with open(filepath, 'r', encoding='utf-8') as f:\n        content = f.read()\n    match = re.match(r'^---\\n(.*?)\\n---', content, re.DOTALL)\n    if not match:\n        return {{}}\n    fm = {{}}\n    for line in match.group(1).split('\\n'):\n        if ':' in line:\n            key, _, value = line.partition(':')\n            fm[key.strip()] = value.strip().strip('\"')\n    return fm\n\nfolder = os.getcwd()\npages = []\n\nfor fname in sorted(os.listdir(folder)):\n    if fname.endswith('.qmd') and fname != 'index.qmd':\n        fm = get_frontmatter(os.path.join(folder, fname))\n        title = fm.get('pagetitle', '')\n        description = fm.get('description', '')\n        if not title:\n            continue\n        pages.append((title, description, fname))\n\nhtml = '&lt;div style=\"display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;\"&gt;'\nfor title, description, link in pages:\n    html += f'&lt;a href=\"{{link}}\" style=\"text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; display: block;\"&gt;&lt;div style=\"font-size: 1.3rem; font-weight: bold; margin-bottom: 0.5rem;\"&gt;{{title}}&lt;/div&gt;&lt;div&gt;{{description}}&lt;/div&gt;&lt;/a&gt;'\nhtml += '&lt;/div&gt;'\n\nprint(html)\n```"
   }
 ]

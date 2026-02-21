@@ -1,0 +1,15 @@
+---
+pagetitle: "Click and Delete"
+description: "Interactive canvas tool for clicking and deleting elements."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/d06cacfd59717506?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

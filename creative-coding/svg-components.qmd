@@ -1,0 +1,15 @@
+---
+pagetitle: "SVG Components"
+description: "A collection of reusable SVG components and shapes."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/svg-components?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>
