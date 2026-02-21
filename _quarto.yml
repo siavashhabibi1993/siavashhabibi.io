@@ -13,8 +13,14 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: evolution.qmd
-        text: Evolution
+      - text: "Computational Geometry"
+        menu:
+          - href: computational-geometry/evolution.qmd
+            text: "Evolution"
+      - text: "Structural Engineering"
+        menu:
+          - href: structural-engineering/mohrs-circle.qmd
+            text: "Mohr's Circle"
 
 format:
   html:
