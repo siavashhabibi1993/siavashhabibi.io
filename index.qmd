@@ -2,6 +2,24 @@
 title: "siavashhabibi.io"
 ---
 
-This is a Quarto website.
+::: {.grid}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {.g-col-6}
+[![](images/computational-geometry.gif)](computational-geometry/evolution.qmd)
+
+### Computational Geometry
+Exploring algorithms and geometric computation.
+
+[View Projects →](computational-geometry/evolution.qmd)
+:::
+
+::: {.g-col-6}
+[![](images/structural-engineering.jpg)](structural-engineering/)
+
+### Structural Engineering
+Structural analysis and engineering tools.
+
+[View Projects →](structural-engineering/)
+:::
+
+:::

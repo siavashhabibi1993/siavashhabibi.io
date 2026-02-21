@@ -3,10 +3,5 @@ title: "Mohr's Circle"
 description: "Interactive Mohr's Circle"
 ---
 
-<iframe 
-  src="https://observablehq.com/@syaleni/mohrs-circle" 
-  width="100%" 
-  height="800px"
-  style="border: none;"
-  allow="cross-origin-isolated">
-</iframe>
+<iframe width="100%" height="915" frameborder="0"
+  src="https://observablehq.com/embed/@syaleni/mohrs-circle?cells=chart"></iframe>
