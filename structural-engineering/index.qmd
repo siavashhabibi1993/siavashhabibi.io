@@ -1,12 +1,38 @@
----
-title: "Structural Engineering"
----
+```{python}
+#| echo: false
+#| output: asis
+import os
+import re
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+def get_frontmatter(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+    if not match:
+        return {}
+    fm = {}
+    for line in match.group(1).split('\n'):
+        if ':' in line:
+            key, _, value = line.partition(':')
+            fm[key.strip()] = value.strip().strip('"')
+    return fm
 
-<a href="mohrs-circle.qmd" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; display: block;">
-  <h3>Mohr's Circle</h3>
-  <p>Interactive Mohr's Circle for stress transformation.</p>
-</a>
+folder = os.getcwd()
+pages = []
 
-</div>
+for fname in sorted(os.listdir(folder)):
+    if fname.endswith('.qmd') and fname != 'index.qmd':
+        fm = get_frontmatter(os.path.join(folder, fname))
+        title = fm.get('pagetitle', '')
+        description = fm.get('description', '')
+        if not title:
+            continue
+        pages.append((title, description, fname))
+
+html = '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">'
+for title, description, link in pages:
+    html += f'<a href="{link}" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; display: block;"><div style="font-size: 1.3rem; font-weight: bold; margin-bottom: 0.5rem;">{title}</div><div>{description}</div></a>'
+html += '</div>'
+
+print(html)
+```

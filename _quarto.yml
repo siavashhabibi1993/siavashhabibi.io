@@ -6,21 +6,35 @@ project:
     - "!README.md"
 
 website:
-  title: "siavashhabibi.io"
+  title: "SIAVASHHABIBI.io"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
-      - text: "Computational Geometry"
+      - text: "Structural Engineering Tools"
         menu:
-          - href: computational-geometry/evolution.qmd
-            text: "Evolution"
-      - text: "Structural Engineering"
-        menu:
+          - href: structural-engineering/index.qmd
+            text: "Overview"
           - href: structural-engineering/mohrs-circle.qmd
             text: "Mohr's Circle"
+      - text: "Programming"
+        menu:
+          - href: programming/index.qmd
+            text: "Overview"
+          - href: programming/etabspy.qmd
+            text: "ETABSPY"
+          - href: programming/etabsagent.qmd
+            text: "ETABSAGENT"
+          - href: programming/safepy.qmd
+            text: "SAFEPY"
+      - text: "Computational Geometry"
+        menu:
+          - href: computational-geometry/index.qmd
+            text: "Overview"
+          - href: computational-geometry/evolution.qmd
+            text: "Evolution"
+      - href: about.qmd
+        text: About
 
 format:
   html:

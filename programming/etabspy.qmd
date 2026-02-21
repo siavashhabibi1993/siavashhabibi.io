@@ -1,0 +1,41 @@
+---
+pagetitle: "ETABSPY"
+description: "A Python desktop application that automates shear wall pier force extraction and S-CONCRETE file generation for multi-story building structural analysis."
+image: "https://raw.githubusercontent.com/siavashhabibi1993/ETABSPY-public/main/.github/assets/Screenshot-1.png"
+format:
+  html:
+    toc: true
+    title-block-banner: false
+---
+```{python}
+#| echo: false
+#| output: asis
+import urllib.request
+import re
+
+username = "siavashhabibi1993"
+repo = "ETABSPY-public"
+branch = "main"
+
+readme_url = f"https://raw.githubusercontent.com/{username}/{repo}/{branch}/README.md"
+image_base = f"https://raw.githubusercontent.com/{username}/{repo}/{branch}/"
+
+with urllib.request.urlopen(readme_url) as response:
+    content = response.read().decode()
+
+def fix_images(md, base):
+    md = re.sub(
+        r'!\[([^\]]*)\]\((?!http)([^)]+)\)',
+        lambda m: f'![{m.group(1)}]({base}{m.group(2)})',
+        md
+    )
+    md = re.sub(
+        r'<img([^>]*?)src=["\'](?!http)([^"\']+)["\']',
+        lambda m: f'<img{m.group(1)}src="{base}{m.group(2)}"',
+        md
+    )
+    return md
+
+content = fix_images(content, image_base)
+print(content)
+```

@@ -2,11 +2,14 @@
 title: "About"
 ---
 
+
 ## My Journey
 
 My programming journey began at the University of Toronto, where I worked as a teaching assistant and MASc student, developing a subroutine for Vector2—a non-linear finite element software ([vectoranalysisgroup.com](https://vectoranalysisgroup.com)). This experience ignited my passion for combining structural engineering with software development.
 
 That passion evolved into full-stack web development when I created a resource management SaaS for my former company using Laravel and Vue.js. Currently, I'm developing ETABSPY and SAFEPY—Python programs that connect to ETABS and SAFE to retrieve structural analysis data and automate design tasks such as shear wall design and slab design, leveraging data science libraries like NumPy, SciPy, and Matplotlib for analysis and visualization. EngSheet continues this journey, built as a single-page application with Vue.js that runs blazingly fast and works seamlessly in the browser, with interactive visualizations powered by D3.js.
+
+![](images/siavash-habibi.jpg){width="300px" fig-alt="Siavash Habibi"}
 
 ## My Passion for Running
 
@@ -14,10 +17,12 @@ Running has become a big part of who I am. What started as just a way to stay ac
 
 You can follow my runs and training journey on [Strava](https://www.strava.com/athletes/22189047).
 
+![](images/running.jpg){width="300px" fig-alt="Siavash Habibi Running"}
+
 ## Staying Active: Boxing, Tennis, and the Gym
 
 Beyond running, I stay active through boxing, tennis, and regular gym sessions. Boxing teaches me discipline and focus—every round demands presence and precision. Tennis brings out my competitive side while keeping things fun and social. The gym ties it all together, building the strength and endurance that support everything else. These activities aren't just about fitness; they're about maintaining balance, pushing boundaries, and finding different ways to challenge myself physically and mentally.
 
 ## My Passion for Piano
 
-Playing piano has always been a personal escape for me—a way to slow down and express thoughts that words can't quite capture. I'm drawn to how a few keys and chords can shift a whole mood, and how much focus and patience it takes to bring a piece to life. It's where I learn balance between precision and creativity, discipline and emotion. Whether I'm learning a new song or just improvising, piano is my reset button—something that keeps me grounded while letting my mind wander freely.
+Playing piano has always been a personal escape for me, a way to slow down and express thoughts that words can't quite capture. I'm drawn to how a few keys and chords can shift a whole mood, and how much focus and patience it takes to bring a piece to life. It's where I learn balance between precision and creativity, discipline and emotion. Whether I'm learning a new song or just improvising, piano is my reset button—something that keeps me grounded while letting my mind wander freely.

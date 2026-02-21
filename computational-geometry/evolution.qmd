@@ -1,6 +1,10 @@
 ---
-title: "Evolution"
-description: "Computational geometry simulation"
+pagetitle: "Evolution"
+description: "An interactive computational geometry simulation exploring evolutionary algorithms and geometric computation."
+format:
+  html:
+    toc: false
+    title-block-banner: false
 ---
 
 <iframe 

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="AI agent powered by ETABSPY for intelligent structural engineering workflows.">
 
-<title>index – SIAVASHHABIBI.io</title>
+<title>ETABSAGENT – SIAVASHHABIBI.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -162,8 +198,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#etabs-ai-agent" id="toc-etabs-ai-agent" class="nav-link active" data-scroll-target="#etabs-ai-agent">ETABS AI Agent</a>
+  <ul class="collapse">
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem">The Problem</a></li>
+  <li><a href="#ai-pipeline" id="toc-ai-pipeline" class="nav-link" data-scroll-target="#ai-pipeline">AI Pipeline</a></li>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
+  <li><a href="#tech-stack" id="toc-tech-stack" class="nav-link" data-scroll-target="#tech-stack">Tech Stack</a></li>
+  <li><a href="#example-prompts" id="toc-example-prompts" class="nav-link" data-scroll-target="#example-prompts">Example Prompts</a></li>
+  <li><a href="#relationship-to-etabspy" id="toc-relationship-to-etabspy" class="nav-link" data-scroll-target="#relationship-to-etabspy">Relationship to ETABSPY</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -171,18 +221,125 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-<a href="../structural-engineering/mohrs-circle.html" style="text-decoration: none; color: inherit; border: 1px solid #ddd; border-radius: 8px; padding: 2rem; display: block;">
-<div style="font-size: 1.3rem; font-weight: bold; margin-bottom: 0.5rem;">
-Mohr’s Circle
-</div>
-<div>
-An interactive Mohr’s Circle tool for stress transformation and principal stress visualization.
-</div>
-</a>
-</div>
+<section id="etabs-ai-agent" class="level1">
+<h1>ETABS AI Agent</h1>
+<p>A natural language interface for ETABS structural engineering software. Describe what you want to do in plain English — the agent translates your intent into precise ETABS COM API calls, executes them against a live model, and returns structured results. Built on top of the <a href="https://github.com/siavashhabibi1993/ETABSPY-public">ETABSPY</a> library and the Anthropic Claude API.</p>
+<blockquote class="blockquote">
+<p><strong>Say:</strong> <em>“Connect to ETABS, draw a 24×24 area element at the origin, and assign the Default property to it.”</em> <strong>Result:</strong> Area element created, confirmed, ready.</p>
+</blockquote>
+<hr>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>The ETABS COM API exposes hundreds of methods across dozens of object categories — AreaObj, FrameObj, PointObj, LoadCases, Results, and more. Using it directly requires navigating dense documentation, mapping every parameter type precisely, and writing repetitive boilerplate for every operation. Even experienced engineers spend significant time just figuring out the right function signatures.</p>
+<p>The ETABS AI Agent removes that friction entirely. You describe the task. The agent figures out which API methods to call, in what order, with what parameters, and executes them.</p>
+<hr>
+</section>
+<section id="ai-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="ai-pipeline">AI Pipeline</h2>
+<p>The agent is built around a <strong>two-stage tool routing architecture</strong> designed to handle the ETABS API’s scale — hundreds of functions across many object categories — within the token constraints of a single LLM call.</p>
+<pre><code>User Prompt
+    │
+    ▼
+┌─────────────────────────────────┐
+│  Stage 1 — Router               │
+│  Claude + select_tool_category  │
+│  (1 tool, minimal token cost)   │
+└────────────────┬────────────────┘
+                 │  Category selected (e.g. "AreaObj")
+                 ▼
+┌─────────────────────────────────┐
+│  Stage 2 — Execution            │
+│  Claude + category tools only   │
+│  (core tools + ~20-70 methods)  │
+└────────────────┬────────────────┘
+                 │  Tool calls resolved
+                 ▼
+┌─────────────────────────────────┐
+│  Generic COM Dispatcher         │
+│  Category_Method → SapModel     │
+│  .Category.Method(*args)        │
+└─────────────────────────────────┘
+                 │
+                 ▼
+           ETABS Model</code></pre>
+<p><strong>Why two stages?</strong> Loading all API tools at once would exceed token rate limits. The router stage costs almost nothing and lets Claude declare intent before the full tool set is loaded. Stage 2 then operates with only the relevant subset, keeping every call well within limits regardless of how many total functions are defined.</p>
+<p><strong>Generic COM Dispatcher</strong> — the execution layer requires no per-function handler. Any <code>Category_Method</code> tool call is automatically routed:</p>
+<p>This means every new function defined in the tool definitions works immediately.</p>
+<hr>
+</section>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<p><strong>Natural Language Control</strong> — Describe any ETABS operation in plain English. The agent resolves ambiguity, selects the right method, and handles parameter mapping automatically.</p>
+<p><strong>Two-Stage Tool Routing</strong> — Category-based routing keeps token usage low while giving Claude access to the full API breadth. Scales to hundreds of functions without hitting rate limits.</p>
+<p><strong>Live ETABS Integration</strong> — Connects to a running ETABS instance via COM API and executes operations in real time. Changes appear immediately in the open model.</p>
+<p><strong>Persistent Session State</strong> — The <code>SapModel</code> connection persists across tool calls within a conversation. Connect once; all subsequent tools operate on the same live model without reconnecting.</p>
+<p><strong>Multi-Turn Conversation</strong> — Follow-up questions and corrections work naturally within the same session. Ask Claude to adjust something it just created, retrieve what it just set, or chain multiple operations.</p>
+<p><strong>Foundation on ETABSPY</strong> — Core utilities (connection management, unit handling, database table retrieval) are backed by the ETABSPY library, which provides validated, production-tested wrappers around the raw COM interface.</p>
+<hr>
+</section>
+<section id="tech-stack" class="level2">
+<h2 class="anchored" data-anchor-id="tech-stack">Tech Stack</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LLM &amp; Tool Use</td>
+<td>Anthropic Claude API (<code>claude-opus-4-6</code>)</td>
+</tr>
+<tr class="even">
+<td>ETABS Integration</td>
+<td><code>comtypes</code>, <code>pywin32</code> (COM API)</td>
+</tr>
+<tr class="odd">
+<td>Core Utilities</td>
+<td>ETABSPY</td>
+</tr>
+<tr class="even">
+<td>Doc Parsing</td>
+<td><code>BeautifulSoup4</code>, <code>html.parser</code></td>
+</tr>
+<tr class="odd">
+<td>Tool Definitions</td>
+<td>JSON schemas (auto-generated)</td>
+</tr>
+<tr class="even">
+<td>Data Processing</td>
+<td><code>pandas</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Run the agent:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> agent <span class="im">import</span> run_etabs_agent</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>run_etabs_agent(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Connect to ETABS, check the current units, then tell me how many "</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"area objects are in the model."</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="example-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="example-prompts">Example Prompts</h2>
+<pre><code>Connect to ETABS and draw a new area element with corners at
+(0,0,0), (24,0,0), (24,24,0), (0,24,0). Name it TestWall.</code></pre>
+<pre><code>Connect to ETABS, retrieve the pier forces table, and tell me
+how many unique pier labels are in the model.</code></pre>
+<pre><code>Connect to ETABS, check the current units, switch to kip-ft if
+they aren't already, then confirm the change.</code></pre>
+<hr>
+</section>
+<section id="relationship-to-etabspy" class="level2">
+<h2 class="anchored" data-anchor-id="relationship-to-etabspy">Relationship to ETABSPY</h2>
+<p><a href="https://github.com/siavashhabibi1993/ETABSPY-public">ETABSPY</a> is the companion desktop application — it automates the pier force extraction and S-CONCRETE file generation workflow through a PyQt5 GUI. The ETABS AI Agent is a separate layer built on top of ETABSPY’s core utilities, replacing the GUI with a conversational interface and extending reach to the full ETABS COM API surface through automated tool generation.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

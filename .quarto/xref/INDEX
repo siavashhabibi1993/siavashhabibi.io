@@ -19,5 +19,17 @@
   },
   "structural-engineering/index.qmd": {
     "index.html": "b6e1ba3b"
+  },
+  "programming/etabsagent.qmd": {
+    "etabsagent.html": "b92536f0"
+  },
+  "programming/etabspy.qmd": {
+    "etabspy.html": "ee246e33"
+  },
+  "programming/index.qmd": {
+    "index.html": "a0c4551c"
+  },
+  "programming/safepy.qmd": {
+    "safepy.html": "09ba2e7d"
   }
 }

@@ -1,10 +1,31 @@
 [
   {
+    "objectID": "programming/etabspy.html",
+    "href": "programming/etabspy.html",
+    "title": "ETABSPY",
+    "section": "",
+    "text": "A Python desktop application that automates the shear wall pier force extraction and S-CONCRETE file generation workflow for multi-story building structural analysis. Built to replace a tedious manual process — retrieving pier forces from ETABS, copying results into Excel, post-processing spreadsheets, and manually preparing S-CONCRETE input files — with a single, controlled, automated pipeline.\n\n\n\nETABSPY V2.0\n\n\nETABSPY connects directly to an analyzed ETABS model via COM API, extracts all required datasets (geometry, load cases, load combinations, pier forces, material properties), and generates ready-to-use .sco S-CONCRETE design files in seconds. Once data is retrieved, it can be saved as a .pkl snapshot and reloaded later without needing ETABS open — enabling a fully offline processing mode.\n\n\n\nETABS\n\n\nKey engineering logic includes seismic shear force magnification (Rd application), where ETABSPY deconstructs each load combination into its individual load cases, applies the user-defined seismic magnification factor only to seismic shear components (V2, V3), then reconstructs the combination to produce the final magnified forces. It also computes moment distribution factors (Cm) and organizes output files by story grouping, with user control over how stories are batched into each S-CONCRETE file via the Pier Forces Viewer.\n\n\n\n\n\n\nLive ETABS Integration — Connects to running ETABS instances via COM API to extract model data in real time\nSCONCRETE File Generation — Automatically generates .sco analysis files from pier forces and load combinations\nSeismic Load Magnification — Implements vectorized seismic magnification algorithms across thousands of load combinations\nPier Forces Viewer — Interactive step chart visualization of pier forces across building stories\nData Persistence — Save and load model snapshots via .pkl files for offline processing\nHigh-Performance Data Processing — Handles millions of rows using optimized pandas DataFrame operations\nResponsive GUI — PyQt5 interface with background threading to keep UI non-blocking during heavy operations\nCentralized Logging — SQLite-based analytics and session logging for corporate deployment tracking\nNetwork Security — Domain validation and connectivity checks for enterprise environments\n\n\n\n\n\n\n\n\nLayer\nTechnologies\n\n\n\n\nGUI\nPyQt5\n\n\nData Processing\npandas, NumPy\n\n\nETABS Integration\ncomtypes, pywin32 (COM API)\n\n\nPersistence\npickle, SQLite\n\n\nPackaging\nPyInstaller, setup.py"
+  },
+  {
+    "objectID": "programming/etabspy.html#features",
+    "href": "programming/etabspy.html#features",
+    "title": "ETABSPY",
+    "section": "",
+    "text": "Live ETABS Integration — Connects to running ETABS instances via COM API to extract model data in real time\nSCONCRETE File Generation — Automatically generates .sco analysis files from pier forces and load combinations\nSeismic Load Magnification — Implements vectorized seismic magnification algorithms across thousands of load combinations\nPier Forces Viewer — Interactive step chart visualization of pier forces across building stories\nData Persistence — Save and load model snapshots via .pkl files for offline processing\nHigh-Performance Data Processing — Handles millions of rows using optimized pandas DataFrame operations\nResponsive GUI — PyQt5 interface with background threading to keep UI non-blocking during heavy operations\nCentralized Logging — SQLite-based analytics and session logging for corporate deployment tracking\nNetwork Security — Domain validation and connectivity checks for enterprise environments"
+  },
+  {
+    "objectID": "programming/etabspy.html#tech-stack",
+    "href": "programming/etabspy.html#tech-stack",
+    "title": "ETABSPY",
+    "section": "",
+    "text": "Layer\nTechnologies\n\n\n\n\nGUI\nPyQt5\n\n\nData Processing\npandas, NumPy\n\n\nETABS Integration\ncomtypes, pywin32 (COM API)\n\n\nPersistence\npickle, SQLite\n\n\nPackaging\nPyInstaller, setup.py"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "siavashhabibi.io",
+    "title": "SIAVASHHABIBI.io",
     "section": "",
-    "text": "Computational Geometry\nExploring algorithms and geometric computation.\nView Projects →\n\n\n\n  \n\nStructural Engineering\nStructural analysis and engineering tools.\nView Projects →"
+    "text": "Structural Engineering Tools\nStructural analysis and engineering tools.\nView Projects →\n\n\n\n  \n\nProgramming\nPython tools for structural engineering automation.\nView Projects →\n\n\n\n  \n\nComputational Geometry\nExploring algorithms and geometric computation.\nView Projects →"
   },
   {
     "objectID": "about.html",
@@ -39,20 +60,76 @@
     "href": "about.html#my-passion-for-piano",
     "title": "About",
     "section": "My Passion for Piano",
-    "text": "My Passion for Piano\nPlaying piano has always been a personal escape for me—a way to slow down and express thoughts that words can’t quite capture. I’m drawn to how a few keys and chords can shift a whole mood, and how much focus and patience it takes to bring a piece to life. It’s where I learn balance between precision and creativity, discipline and emotion. Whether I’m learning a new song or just improvising, piano is my reset button—something that keeps me grounded while letting my mind wander freely."
+    "text": "My Passion for Piano\nPlaying piano has always been a personal escape for me, a way to slow down and express thoughts that words can’t quite capture. I’m drawn to how a few keys and chords can shift a whole mood, and how much focus and patience it takes to bring a piece to life. It’s where I learn balance between precision and creativity, discipline and emotion. Whether I’m learning a new song or just improvising, piano is my reset button—something that keeps me grounded while letting my mind wander freely."
   },
   {
     "objectID": "computational-geometry/index.html",
     "href": "computational-geometry/index.html",
-    "title": "Computational Geometry",
+    "title": "SIAVASHHABIBI.io",
     "section": "",
-    "text": "Evolution\n\n\nComputational geometry simulation."
+    "text": "Evolution\n\n\nAn interactive computational geometry simulation exploring evolutionary algorithms and geometric computation."
+  },
+  {
+    "objectID": "programming/etabsagent.html",
+    "href": "programming/etabsagent.html",
+    "title": "ETABS AI Agent",
+    "section": "",
+    "text": "A natural language interface for ETABS structural engineering software. Describe what you want to do in plain English — the agent translates your intent into precise ETABS COM API calls, executes them against a live model, and returns structured results. Built on top of the ETABSPY library and the Anthropic Claude API.\n\nSay: “Connect to ETABS, draw a 24×24 area element at the origin, and assign the Default property to it.” Result: Area element created, confirmed, ready.\n\n\n\n\nThe ETABS COM API exposes hundreds of methods across dozens of object categories — AreaObj, FrameObj, PointObj, LoadCases, Results, and more. Using it directly requires navigating dense documentation, mapping every parameter type precisely, and writing repetitive boilerplate for every operation. Even experienced engineers spend significant time just figuring out the right function signatures.\nThe ETABS AI Agent removes that friction entirely. You describe the task. The agent figures out which API methods to call, in what order, with what parameters, and executes them.\n\n\n\n\nThe agent is built around a two-stage tool routing architecture designed to handle the ETABS API’s scale — hundreds of functions across many object categories — within the token constraints of a single LLM call.\nUser Prompt\n    │\n    ▼\n┌─────────────────────────────────┐\n│  Stage 1 — Router               │\n│  Claude + select_tool_category  │\n│  (1 tool, minimal token cost)   │\n└────────────────┬────────────────┘\n                 │  Category selected (e.g. \"AreaObj\")\n                 ▼\n┌─────────────────────────────────┐\n│  Stage 2 — Execution            │\n│  Claude + category tools only   │\n│  (core tools + ~20-70 methods)  │\n└────────────────┬────────────────┘\n                 │  Tool calls resolved\n                 ▼\n┌─────────────────────────────────┐\n│  Generic COM Dispatcher         │\n│  Category_Method → SapModel     │\n│  .Category.Method(*args)        │\n└─────────────────────────────────┘\n                 │\n                 ▼\n           ETABS Model\nWhy two stages? Loading all API tools at once would exceed token rate limits. The router stage costs almost nothing and lets Claude declare intent before the full tool set is loaded. Stage 2 then operates with only the relevant subset, keeping every call well within limits regardless of how many total functions are defined.\nGeneric COM Dispatcher — the execution layer requires no per-function handler. Any Category_Method tool call is automatically routed:\nThis means every new function defined in the tool definitions works immediately.\n\n\n\n\nNatural Language Control — Describe any ETABS operation in plain English. The agent resolves ambiguity, selects the right method, and handles parameter mapping automatically.\nTwo-Stage Tool Routing — Category-based routing keeps token usage low while giving Claude access to the full API breadth. Scales to hundreds of functions without hitting rate limits.\nLive ETABS Integration — Connects to a running ETABS instance via COM API and executes operations in real time. Changes appear immediately in the open model.\nPersistent Session State — The SapModel connection persists across tool calls within a conversation. Connect once; all subsequent tools operate on the same live model without reconnecting.\nMulti-Turn Conversation — Follow-up questions and corrections work naturally within the same session. Ask Claude to adjust something it just created, retrieve what it just set, or chain multiple operations.\nFoundation on ETABSPY — Core utilities (connection management, unit handling, database table retrieval) are backed by the ETABSPY library, which provides validated, production-tested wrappers around the raw COM interface.\n\n\n\n\n\n\n\nLayer\nTechnologies\n\n\n\n\nLLM & Tool Use\nAnthropic Claude API (claude-opus-4-6)\n\n\nETABS Integration\ncomtypes, pywin32 (COM API)\n\n\nCore Utilities\nETABSPY\n\n\nDoc Parsing\nBeautifulSoup4, html.parser\n\n\nTool Definitions\nJSON schemas (auto-generated)\n\n\nData Processing\npandas\n\n\n\n\nRun the agent:\nfrom agent import run_etabs_agent\n\nrun_etabs_agent(\n    \"Connect to ETABS, check the current units, then tell me how many \"\n    \"area objects are in the model.\"\n)\n\n\n\n\nConnect to ETABS and draw a new area element with corners at\n(0,0,0), (24,0,0), (24,24,0), (0,24,0). Name it TestWall.\nConnect to ETABS, retrieve the pier forces table, and tell me\nhow many unique pier labels are in the model.\nConnect to ETABS, check the current units, switch to kip-ft if\nthey aren't already, then confirm the change.\n\n\n\n\nETABSPY is the companion desktop application — it automates the pier force extraction and S-CONCRETE file generation workflow through a PyQt5 GUI. The ETABS AI Agent is a separate layer built on top of ETABSPY’s core utilities, replacing the GUI with a conversational interface and extending reach to the full ETABS COM API surface through automated tool generation."
+  },
+  {
+    "objectID": "programming/etabsagent.html#the-problem",
+    "href": "programming/etabsagent.html#the-problem",
+    "title": "ETABS AI Agent",
+    "section": "",
+    "text": "The ETABS COM API exposes hundreds of methods across dozens of object categories — AreaObj, FrameObj, PointObj, LoadCases, Results, and more. Using it directly requires navigating dense documentation, mapping every parameter type precisely, and writing repetitive boilerplate for every operation. Even experienced engineers spend significant time just figuring out the right function signatures.\nThe ETABS AI Agent removes that friction entirely. You describe the task. The agent figures out which API methods to call, in what order, with what parameters, and executes them."
+  },
+  {
+    "objectID": "programming/etabsagent.html#ai-pipeline",
+    "href": "programming/etabsagent.html#ai-pipeline",
+    "title": "ETABS AI Agent",
+    "section": "",
+    "text": "The agent is built around a two-stage tool routing architecture designed to handle the ETABS API’s scale — hundreds of functions across many object categories — within the token constraints of a single LLM call.\nUser Prompt\n    │\n    ▼\n┌─────────────────────────────────┐\n│  Stage 1 — Router               │\n│  Claude + select_tool_category  │\n│  (1 tool, minimal token cost)   │\n└────────────────┬────────────────┘\n                 │  Category selected (e.g. \"AreaObj\")\n                 ▼\n┌─────────────────────────────────┐\n│  Stage 2 — Execution            │\n│  Claude + category tools only   │\n│  (core tools + ~20-70 methods)  │\n└────────────────┬────────────────┘\n                 │  Tool calls resolved\n                 ▼\n┌─────────────────────────────────┐\n│  Generic COM Dispatcher         │\n│  Category_Method → SapModel     │\n│  .Category.Method(*args)        │\n└─────────────────────────────────┘\n                 │\n                 ▼\n           ETABS Model\nWhy two stages? Loading all API tools at once would exceed token rate limits. The router stage costs almost nothing and lets Claude declare intent before the full tool set is loaded. Stage 2 then operates with only the relevant subset, keeping every call well within limits regardless of how many total functions are defined.\nGeneric COM Dispatcher — the execution layer requires no per-function handler. Any Category_Method tool call is automatically routed:\nThis means every new function defined in the tool definitions works immediately."
+  },
+  {
+    "objectID": "programming/etabsagent.html#features",
+    "href": "programming/etabsagent.html#features",
+    "title": "ETABS AI Agent",
+    "section": "",
+    "text": "Natural Language Control — Describe any ETABS operation in plain English. The agent resolves ambiguity, selects the right method, and handles parameter mapping automatically.\nTwo-Stage Tool Routing — Category-based routing keeps token usage low while giving Claude access to the full API breadth. Scales to hundreds of functions without hitting rate limits.\nLive ETABS Integration — Connects to a running ETABS instance via COM API and executes operations in real time. Changes appear immediately in the open model.\nPersistent Session State — The SapModel connection persists across tool calls within a conversation. Connect once; all subsequent tools operate on the same live model without reconnecting.\nMulti-Turn Conversation — Follow-up questions and corrections work naturally within the same session. Ask Claude to adjust something it just created, retrieve what it just set, or chain multiple operations.\nFoundation on ETABSPY — Core utilities (connection management, unit handling, database table retrieval) are backed by the ETABSPY library, which provides validated, production-tested wrappers around the raw COM interface."
+  },
+  {
+    "objectID": "programming/etabsagent.html#tech-stack",
+    "href": "programming/etabsagent.html#tech-stack",
+    "title": "ETABS AI Agent",
+    "section": "",
+    "text": "Layer\nTechnologies\n\n\n\n\nLLM & Tool Use\nAnthropic Claude API (claude-opus-4-6)\n\n\nETABS Integration\ncomtypes, pywin32 (COM API)\n\n\nCore Utilities\nETABSPY\n\n\nDoc Parsing\nBeautifulSoup4, html.parser\n\n\nTool Definitions\nJSON schemas (auto-generated)\n\n\nData Processing\npandas\n\n\n\n\nRun the agent:\nfrom agent import run_etabs_agent\n\nrun_etabs_agent(\n    \"Connect to ETABS, check the current units, then tell me how many \"\n    \"area objects are in the model.\"\n)"
+  },
+  {
+    "objectID": "programming/etabsagent.html#example-prompts",
+    "href": "programming/etabsagent.html#example-prompts",
+    "title": "ETABS AI Agent",
+    "section": "",
+    "text": "Connect to ETABS and draw a new area element with corners at\n(0,0,0), (24,0,0), (24,24,0), (0,24,0). Name it TestWall.\nConnect to ETABS, retrieve the pier forces table, and tell me\nhow many unique pier labels are in the model.\nConnect to ETABS, check the current units, switch to kip-ft if\nthey aren't already, then confirm the change."
+  },
+  {
+    "objectID": "programming/etabsagent.html#relationship-to-etabspy",
+    "href": "programming/etabsagent.html#relationship-to-etabspy",
+    "title": "ETABS AI Agent",
+    "section": "",
+    "text": "ETABSPY is the companion desktop application — it automates the pier force extraction and S-CONCRETE file generation workflow through a PyQt5 GUI. The ETABS AI Agent is a separate layer built on top of ETABSPY’s core utilities, replacing the GUI with a conversational interface and extending reach to the full ETABS COM API surface through automated tool generation."
+  },
+  {
+    "objectID": "programming/index.html",
+    "href": "programming/index.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "ETABSAGENT\n\n\nAI agent powered by ETABSPY for intelligent structural engineering workflows.\n\n\n\nETABSPY\n\n\nA Python desktop application that automates shear wall pier force extraction and S-CONCRETE file generation for multi-story building structural analysis."
   },
   {
     "objectID": "structural-engineering/index.html",
     "href": "structural-engineering/index.html",
-    "title": "Structural Engineering",
+    "title": "SIAVASHHABIBI.io",
     "section": "",
-    "text": "Mohr’s Circle\n\n\nInteractive Mohr’s Circle for stress transformation."
+    "text": "Mohr’s Circle\n\n\nAn interactive Mohr’s Circle tool for stress transformation and principal stress visualization."
   }
 ]

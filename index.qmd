@@ -1,11 +1,37 @@
 ---
-title: "siavashhabibi.io"
+pagetitle: "SIAVASHHABIBI.io"
+format:
+  html:
+    toc: false
+    title-block-banner: false
 ---
 
 ::: {.grid}
 
 ::: {.g-col-6}
-<a href="computational-geometry/evolution.qmd">
+<a href="structural-engineering/">
+  <img src="images/structural-engineering.jpg" style="width:100%; height:300px; object-fit:cover; border-radius:8px;"/>
+</a>
+
+### Structural Engineering Tools
+Structural analysis and engineering tools.
+
+[View Projects →](structural-engineering/)
+:::
+
+::: {.g-col-6}
+<a href="programming/">
+  <img src="images/programming.png" style="width:100%; height:300px; object-fit:cover; border-radius:8px;"/>
+</a>
+
+### Programming
+Python tools for structural engineering automation.
+
+[View Projects →](programming/)
+:::
+
+::: {.g-col-6}
+<a href="computational-geometry/">
   <img src="images/computational-geometry.gif" style="width:100%; height:300px; object-fit:cover; border-radius:8px;"/>
 </a>
 
@@ -13,17 +39,6 @@ title: "siavashhabibi.io"
 Exploring algorithms and geometric computation.
 
 [View Projects →](computational-geometry/)
-:::
-
-::: {.g-col-6}
-<a href="structural-engineering/">
-  <img src="images/structural-engineering.jpg" style="width:100%; height:300px; object-fit:cover; border-radius:8px;"/>
-</a>
-
-### Structural Engineering
-Structural analysis and engineering tools.
-
-[View Projects →](structural-engineering/)
 :::
 
 :::
