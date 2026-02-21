@@ -1,0 +1,15 @@
+---
+pagetitle: "Analysis of a Simply Supported Beam"
+description: "Interactive analysis of a simply supported beam with shear force and bending moment diagrams."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/simply-supported-beam?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

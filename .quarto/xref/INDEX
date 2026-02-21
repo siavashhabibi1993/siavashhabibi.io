@@ -31,5 +31,38 @@
   },
   "programming/safepy.qmd": {
     "safepy.html": "09ba2e7d"
+  },
+  "computational-geometry/interpolators.qmd": {
+    "interpolators.html": "d95c83eb"
+  },
+  "computational-geometry/parametric-curves.qmd": {
+    "parametric-curves.html": "592173a5"
+  },
+  "computational-geometry/radial-patterns.qmd": {
+    "radial-patterns.html": "e600f4ae"
+  },
+  "computational-geometry/random-generatives.qmd": {
+    "random-generatives.html": "3113d62e"
+  },
+  "computational-geometry/some-circles.qmd": {
+    "some-circles.html": "af58aaa0"
+  },
+  "structural-engineering/glass-panel.qmd": {
+    "glass-panel.html": "2e4c2df9"
+  },
+  "structural-engineering/section-properties.qmd": {
+    "section-properties.html": "6f0e6e10"
+  },
+  "structural-engineering/soil-pressure-coefficients.qmd": {
+    "soil-pressure-coefficients.html": "826cd220"
+  },
+  "structural-engineering/structural-wood-panels.qmd": {
+    "structural-wood-panels.html": "76190b6e"
+  },
+  "structural-engineering/reinforced-concrete-beam.qmd": {
+    "reinforced-concrete-beam.html": "e5313af7"
+  },
+  "structural-engineering/simply-supported-beam.qmd": {
+    "simply-supported-beam.html": "6e426a23"
   }
 }

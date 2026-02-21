@@ -1,0 +1,15 @@
+---
+pagetitle: "Glass Panel Load Calculation"
+description: "Interactive calculator for glass panel load capacity and thickness design per structural glazing standards."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/94e1b9b15982b882?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

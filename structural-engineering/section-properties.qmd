@@ -1,0 +1,15 @@
+---
+pagetitle: "Section Properties Calculator"
+description: "Interactive calculator for cross-section properties including moment of inertia, centroid, and section modulus."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/section-properties-calculator?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

@@ -9,7 +9,9 @@ My programming journey began at the University of Toronto, where I worked as a t
 
 That passion evolved into full-stack web development when I created a resource management SaaS for my former company using Laravel and Vue.js. Currently, I'm developing ETABSPY and SAFEPY—Python programs that connect to ETABS and SAFE to retrieve structural analysis data and automate design tasks such as shear wall design and slab design, leveraging data science libraries like NumPy, SciPy, and Matplotlib for analysis and visualization. EngSheet continues this journey, built as a single-page application with Vue.js that runs blazingly fast and works seamlessly in the browser, with interactive visualizations powered by D3.js.
 
+<div style="text-align: center;">
 ![](images/siavash-habibi.jpg){width="300px" fig-alt="Siavash Habibi"}
+</div>
 
 ## My Passion for Running
 
@@ -17,7 +19,9 @@ Running has become a big part of who I am. What started as just a way to stay ac
 
 You can follow my runs and training journey on [Strava](https://www.strava.com/athletes/22189047).
 
+<div style="text-align: center;">
 ![](images/running.jpg){width="300px" fig-alt="Siavash Habibi Running"}
+</div>
 
 ## Staying Active: Boxing, Tennis, and the Gym
 

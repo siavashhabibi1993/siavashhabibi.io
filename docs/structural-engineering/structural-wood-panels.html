@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A Python desktop application that automates shear wall pier force extraction and S-CONCRETE file generation for multi-story building structural analysis.">
+<meta name="description" content="Interactive reference and design tool for structural wood panels and sheathing properties.">
 
-<title>ETABSPY – SIAVASHHABIBI.io</title>
+<title>Structural Wood Panels – SIAVASHHABIBI.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -207,97 +207,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#etabspy" id="toc-etabspy" class="nav-link active" data-scroll-target="#etabspy">ETABSPY</a>
-  <ul class="collapse">
-  <li><a href="#pier-force-viewer" id="toc-pier-force-viewer" class="nav-link" data-scroll-target="#pier-force-viewer"><img src="https://raw.githubusercontent.com/siavashhabibi1993/ETABSPY-public/main/.github/assets/Screenshot-3.png" class="img-fluid" alt="Pier Force Viewer"></a></li>
-  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
-  <li><a href="#tech-stack" id="toc-tech-stack" class="nav-link" data-scroll-target="#tech-stack">Tech Stack</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="etabspy" class="level1">
-<h1>ETABSPY</h1>
-<p>A Python desktop application that automates the shear wall pier force extraction and S-CONCRETE file generation workflow for multi-story building structural analysis. Built to replace a tedious manual process — retrieving pier forces from ETABS, copying results into Excel, post-processing spreadsheets, and manually preparing S-CONCRETE input files — with a single, controlled, automated pipeline.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://raw.githubusercontent.com/siavashhabibi1993/ETABSPY-public/main/.github/assets/Screenshot-1.png" class="img-fluid figure-img"></p>
-<figcaption>ETABSPY V2.0</figcaption>
-</figure>
+<div class="observable-embed">
+<p><iframe src="https://observablehq.com/embed/@syaleni/structural-panels?ui=classic" allow="cross-origin-isolated"> </iframe></p>
 </div>
-<p>ETABSPY connects directly to an analyzed ETABS model via COM API, extracts all required datasets (geometry, load cases, load combinations, pier forces, material properties), and generates ready-to-use <code>.sco</code> S-CONCRETE design files in seconds. Once data is retrieved, it can be saved as a <code>.pkl</code> snapshot and reloaded later without needing ETABS open — enabling a fully offline processing mode.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://raw.githubusercontent.com/siavashhabibi1993/ETABSPY-public/main/.github/assets/Screenshot-2.png" class="img-fluid figure-img"></p>
-<figcaption>ETABS</figcaption>
-</figure>
-</div>
-<p>Key engineering logic includes seismic shear force magnification (Rd application), where ETABSPY deconstructs each load combination into its individual load cases, applies the user-defined seismic magnification factor only to seismic shear components (V2, V3), then reconstructs the combination to produce the final magnified forces. It also computes moment distribution factors (Cm) and organizes output files by story grouping, with user control over how stories are batched into each S-CONCRETE file via the Pier Forces Viewer.</p>
-<section id="pier-force-viewer" class="level2">
-<h2 class="anchored" data-anchor-id="pier-force-viewer"><img src="https://raw.githubusercontent.com/siavashhabibi1993/ETABSPY-public/main/.github/assets/Screenshot-3.png" class="img-fluid" alt="Pier Force Viewer"></h2>
-</section>
-<section id="features" class="level2">
-<h2 class="anchored" data-anchor-id="features">Features</h2>
-<ul>
-<li><strong>Live ETABS Integration</strong> — Connects to running ETABS instances via COM API to extract model data in real time</li>
-<li><strong>SCONCRETE File Generation</strong> — Automatically generates <code>.sco</code> analysis files from pier forces and load combinations</li>
-<li><strong>Seismic Load Magnification</strong> — Implements vectorized seismic magnification algorithms across thousands of load combinations</li>
-<li><strong>Pier Forces Viewer</strong> — Interactive step chart visualization of pier forces across building stories</li>
-<li><strong>Data Persistence</strong> — Save and load model snapshots via <code>.pkl</code> files for offline processing</li>
-<li><strong>High-Performance Data Processing</strong> — Handles millions of rows using optimized <code>pandas</code> DataFrame operations</li>
-<li><strong>Responsive GUI</strong> — PyQt5 interface with background threading to keep UI non-blocking during heavy operations</li>
-<li><strong>Centralized Logging</strong> — SQLite-based analytics and session logging for corporate deployment tracking</li>
-<li><strong>Network Security</strong> — Domain validation and connectivity checks for enterprise environments</li>
-</ul>
-<hr>
-</section>
-<section id="tech-stack" class="level2">
-<h2 class="anchored" data-anchor-id="tech-stack">Tech Stack</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Layer</th>
-<th>Technologies</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>GUI</td>
-<td>PyQt5</td>
-</tr>
-<tr class="even">
-<td>Data Processing</td>
-<td>pandas, NumPy</td>
-</tr>
-<tr class="odd">
-<td>ETABS Integration</td>
-<td>comtypes, pywin32 (COM API)</td>
-</tr>
-<tr class="even">
-<td>Persistence</td>
-<td>pickle, SQLite</td>
-</tr>
-<tr class="odd">
-<td>Packaging</td>
-<td>PyInstaller, setup.py</td>
-</tr>
-</tbody>
-</table>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

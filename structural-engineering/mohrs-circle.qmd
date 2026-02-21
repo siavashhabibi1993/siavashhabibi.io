@@ -6,11 +6,9 @@ format:
     toc: false
     title-block-banner: false
 ---
-
-<iframe 
-  src="https://observablehq.com/embed/@syaleni/mohrs-circle?ui=classic" 
-  width="100%" 
-  height="800px"
-  style="border: none;"
-  allow="cross-origin-isolated">
-</iframe>
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/mohrs-circle?ui=classic" 
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

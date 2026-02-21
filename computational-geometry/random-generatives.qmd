@@ -1,0 +1,14 @@
+---
+pagetitle: "Random Generatives"
+description: "Generative art and randomized computational geometry visualizations."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+<div class="observable-embed">
+    <iframe 
+    src="https://observablehq.com/embed/65633b1f98ff39d9?ui=classic" 
+    allow="cross-origin-isolated">
+    </iframe>
+</div>

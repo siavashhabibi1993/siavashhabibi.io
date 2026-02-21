@@ -1,0 +1,15 @@
+---
+pagetitle: "Flexural Resistance of a Reinforced Concrete Beam"
+description: "Interactive calculator for the flexural resistance of reinforced concrete beams per CSA design standards."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+
+<div class="observable-embed">
+  <iframe 
+    src="https://observablehq.com/embed/@syaleni/untitled?ui=classic"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>

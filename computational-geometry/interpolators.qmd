@@ -1,0 +1,14 @@
+---
+pagetitle: "Interpolators"
+description: "Interactive exploration of interpolation methods and smooth curve generation."
+format:
+  html:
+    toc: false
+    title-block-banner: false
+---
+<div class="observable-embed">
+    <iframe 
+    src="https://observablehq.com/embed/96edd8bdd7f507a6?ui=classic" 
+    allow="cross-origin-isolated">
+    </iframe>
+</div>

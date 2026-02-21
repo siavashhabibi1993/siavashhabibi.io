@@ -11,12 +11,24 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: "Structural Engineering Tools"
+      - text: "Structural Engineering"
         menu:
           - href: structural-engineering/index.qmd
             text: "Overview"
           - href: structural-engineering/mohrs-circle.qmd
             text: "Mohr's Circle"
+          - href: structural-engineering/section-properties.qmd
+            text: "Section Properties"
+          - href: structural-engineering/simply-supported-beam.qmd
+            text: "Simply Supported Beam"
+          - href: structural-engineering/reinforced-concrete-beam.qmd
+            text: "RC Beam Flexure"
+          - href: structural-engineering/glass-panel.qmd
+            text: "Glass Panel Load"
+          - href: structural-engineering/structural-wood-panels.qmd
+            text: "Structural Wood Panels"
+          - href: structural-engineering/soil-pressure-coefficients.qmd
+            text: "Soil Pressure Coefficients"
       - text: "Programming"
         menu:
           - href: programming/index.qmd
@@ -33,6 +45,16 @@ website:
             text: "Overview"
           - href: computational-geometry/evolution.qmd
             text: "Evolution"
+          - href: computational-geometry/interpolators.qmd
+            text: "Interpolators"
+          - href: computational-geometry/parametric-curves.qmd
+            text: "Parametric Curves"
+          - href: computational-geometry/radial-patterns.qmd
+            text: "Radial Patterns"
+          - href: computational-geometry/random-generatives.qmd
+            text: "Random Generatives"
+          - href: computational-geometry/some-circles.qmd
+            text: "Some Circles"
       - href: about.qmd
         text: About
 

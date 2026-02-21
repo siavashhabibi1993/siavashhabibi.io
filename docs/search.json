@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "structural-engineering/index.html",
+    "href": "structural-engineering/index.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "Glass Panel Load Calculation\n\n\nInteractive calculator for glass panel load capacity and thickness design per structural glazing standards.\n\n\n\nMohr’s Circle\n\n\nAn interactive Mohr’s Circle tool for stress transformation and principal stress visualization.\n\n\n\nFlexural Resistance of a Reinforced Concrete Beam\n\n\nInteractive calculator for the flexural resistance of reinforced concrete beams per CSA design standards.\n\n\n\nSection Properties Calculator\n\n\nInteractive calculator for cross-section properties including moment of inertia, centroid, and section modulus.\n\n\n\nAnalysis of a Simply Supported Beam\n\n\nInteractive analysis of a simply supported beam with shear force and bending moment diagrams.\n\n\n\nSoil Pressure Coefficients\n\n\nInteractive visualization of active and passive soil pressure coefficients using Rankine and Coulomb theories.\n\n\n\nStructural Wood Panels\n\n\nInteractive reference and design tool for structural wood panels and sheathing properties."
+  },
+  {
     "objectID": "programming/etabspy.html",
     "href": "programming/etabspy.html",
     "title": "ETABSPY",
@@ -26,6 +33,27 @@
     "title": "SIAVASHHABIBI.io",
     "section": "",
     "text": "Structural Engineering Tools\nStructural analysis and engineering tools.\nView Projects →\n\n\n\n  \n\nProgramming\nPython tools for structural engineering automation.\nView Projects →\n\n\n\n  \n\nComputational Geometry\nExploring algorithms and geometric computation.\nView Projects →"
+  },
+  {
+    "objectID": "computational-geometry/random-generatives.html",
+    "href": "computational-geometry/random-generatives.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "&lt;iframe \nsrc=\"https://observablehq.com/embed/65633b1f98ff39d9?ui=classic\" \nallow=\"cross-origin-isolated\"&gt;\n&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "computational-geometry/parametric-curves.html",
+    "href": "computational-geometry/parametric-curves.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "&lt;iframe \nsrc=\"https://observablehq.com/embed/@syaleni/parametric-curve-viewer?ui=classic\" \nallow=\"cross-origin-isolated\"&gt;\n&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "computational-geometry/index.html",
+    "href": "computational-geometry/index.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "Evolution\n\n\nAn interactive computational geometry simulation exploring evolutionary algorithms and geometric computation.\n\n\n\nInterpolators\n\n\nInteractive exploration of interpolation methods and smooth curve generation.\n\n\n\nParametric Curve Viewer\n\n\nInteractive viewer for parametric curves and geometric forms.\n\n\n\nRadial Pattern\n\n\nInteractive radial pattern generator using parametric geometry and trigonometric functions.\n\n\n\nRandom Generatives\n\n\nGenerative art and randomized computational geometry visualizations.\n\n\n\nSome Circles\n\n\nGenerative circle patterns using parametric geometry and iterative algorithms."
   },
   {
     "objectID": "about.html",
@@ -63,11 +91,25 @@
     "text": "My Passion for Piano\nPlaying piano has always been a personal escape for me, a way to slow down and express thoughts that words can’t quite capture. I’m drawn to how a few keys and chords can shift a whole mood, and how much focus and patience it takes to bring a piece to life. It’s where I learn balance between precision and creativity, discipline and emotion. Whether I’m learning a new song or just improvising, piano is my reset button—something that keeps me grounded while letting my mind wander freely."
   },
   {
-    "objectID": "computational-geometry/index.html",
-    "href": "computational-geometry/index.html",
+    "objectID": "computational-geometry/interpolators.html",
+    "href": "computational-geometry/interpolators.html",
     "title": "SIAVASHHABIBI.io",
     "section": "",
-    "text": "Evolution\n\n\nAn interactive computational geometry simulation exploring evolutionary algorithms and geometric computation."
+    "text": "&lt;iframe \nsrc=\"https://observablehq.com/embed/96edd8bdd7f507a6?ui=classic\" \nallow=\"cross-origin-isolated\"&gt;\n&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "computational-geometry/radial-patterns.html",
+    "href": "computational-geometry/radial-patterns.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "&lt;iframe \nsrc=\"https://observablehq.com/embed/@syaleni/radial-pattern?ui=classic\" \nallow=\"cross-origin-isolated\"&gt;\n&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "computational-geometry/some-circles.html",
+    "href": "computational-geometry/some-circles.html",
+    "title": "SIAVASHHABIBI.io",
+    "section": "",
+    "text": "&lt;iframe \nsrc=\"https://observablehq.com/embed/@syaleni/some-circles?ui=classic\" \nallow=\"cross-origin-isolated\"&gt;\n&lt;/iframe&gt;"
   },
   {
     "objectID": "programming/etabsagent.html",
@@ -124,12 +166,5 @@
     "title": "SIAVASHHABIBI.io",
     "section": "",
     "text": "ETABSAGENT\n\n\nAI agent powered by ETABSPY for intelligent structural engineering workflows.\n\n\n\nETABSPY\n\n\nA Python desktop application that automates shear wall pier force extraction and S-CONCRETE file generation for multi-story building structural analysis."
-  },
-  {
-    "objectID": "structural-engineering/index.html",
-    "href": "structural-engineering/index.html",
-    "title": "SIAVASHHABIBI.io",
-    "section": "",
-    "text": "Mohr’s Circle\n\n\nAn interactive Mohr’s Circle tool for stress transformation and principal stress visualization."
   }
 ]
